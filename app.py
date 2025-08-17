@@ -358,7 +358,7 @@ def main():
                     st.write(f"• {rec}")
                 
                 # Additional insights
-                with st.expander("📊 Additional Insights"):
+                with st.expander("Additional Insights"):
                     st.write("**Your Profile Summary:**")
                     st.write(f"- Age: {age} years")
                     st.write(f"- Daily usage: {daily_usage} hours")
