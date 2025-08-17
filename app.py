@@ -146,7 +146,7 @@ def create_and_train_model():
     ])
     
     model.fit(X, y)
-    st.success("✅ New model trained successfully!")
+    st.success("New model trained successfully!")
     return model
 
 @st.cache_resource
@@ -155,7 +155,7 @@ def load_or_create_model():
     try:
         import joblib
         model = joblib.load('addiction_classifier.joblib')
-        st.success("✅ Pre-trained model loaded successfully!")
+        st.success("Pre-trained model loaded successfully!")
         return model
     except Exception as e:
         st.warning(f"Could not load saved model: {str(e)}")
@@ -177,7 +177,7 @@ def main():
     col1, col2 = st.columns([1, 2])
     
     with col1:
-        st.header("📋 Input Information")
+        st.header("Input Information")
         
         # Basic Information
         st.subheader("Basic Information")
@@ -221,7 +221,7 @@ def main():
         predict_button = st.button("🔮 Predict Addiction Risk", use_container_width=True)
     
     with col2:
-        st.header("📊 Results & Analysis")
+        st.header("Results & Analysis")
         
         if predict_button:
             # Create input dataframe
@@ -281,7 +281,7 @@ def main():
                 st.plotly_chart(fig, use_container_width=True)
                 
                 # Risk factors analysis
-                st.subheader("📈 Risk Factor Analysis")
+                st.subheader("Risk Factor Analysis")
                 
                 risk_factors = []
                 protective_factors = []
@@ -325,29 +325,29 @@ def main():
                     st.info("**Moderate risk profile - no major concerns identified**")
                 
                 # Recommendations
-                st.subheader("💡 Recommendations")
+                st.subheader("Recommendations")
                 
                 recommendations = []
                 
                 if daily_usage >= 5:
-                    recommendations.append("📱 Set daily time limits on social media apps (try 2-3 hours max)")
-                    recommendations.append("⏰ Use app timers and notifications to track usage")
+                    recommendations.append("Set daily time limits on social media apps (try 2-3 hours max)")
+                    recommendations.append("Use app timers and notifications to track usage")
                     
                 if sleep_hours < 7:
-                    recommendations.append("😴 Aim for 7-9 hours of sleep per night")
-                    recommendations.append("🌙 Avoid screens 1 hour before bedtime")
+                    recommendations.append("Aim for 7-9 hours of sleep per night")
+                    recommendations.append("Avoid screens 1 hour before bedtime")
                     
                 if mental_health_score <= 6:
-                    recommendations.append("🧠 Consider speaking with a counselor or mental health professional")
-                    recommendations.append("🧘 Try mindfulness or meditation apps")
+                    recommendations.append("Consider speaking with a counselor or mental health professional")
+                    recommendations.append("Try mindfulness or meditation apps")
                     
                 if conflicts >= 2:
-                    recommendations.append("👥 Practice digital detox periods with family/friends")
-                    recommendations.append("💬 Communicate openly about social media boundaries")
+                    recommendations.append("Practice digital detox periods with family/friends")
+                    recommendations.append("Communicate openly about social media boundaries")
                 
                 if affects_academic == "Yes":
-                    recommendations.append("📚 Create phone-free study zones and times")
-                    recommendations.append("🎯 Use website blockers during study sessions")
+                    recommendations.append("Create phone-free study zones and times")
+                    recommendations.append("Use website blockers during study sessions")
                 
                 if not recommendations:
                     recommendations.append("Continue maintaining healthy social media habits!")
@@ -392,7 +392,7 @@ def main():
             st.info("👈 Please fill in the information on the left and click 'Predict Addiction Risk' to see results.")
             
             # Show some statistics while waiting
-            st.subheader("📊 About Social Media Addiction")
+            st.subheader("About Social Media Addiction")
             
             col2a, col2b = st.columns(2)
             
