@@ -350,9 +350,9 @@ def main():
                     recommendations.append("🎯 Use website blockers during study sessions")
                 
                 if not recommendations:
-                    recommendations.append("✅ Continue maintaining healthy social media habits!")
-                    recommendations.append("🔍 Stay aware of your usage patterns")
-                    recommendations.append("⚖️ Maintain balance between online and offline activities")
+                    recommendations.append("Continue maintaining healthy social media habits!")
+                    recommendations.append("Stay aware of your usage patterns")
+                    recommendations.append("Maintain balance between online and offline activities")
                 
                 for rec in recommendations:
                     st.write(f"• {rec}")
